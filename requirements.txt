@@ -36,6 +36,7 @@
 
 # ML frameworks (balanced)
 torch
+tensorflow
 
 # Vision + YOLO
 ultralytics
@@ -62,3 +63,5 @@ streamlit
 matplotlib
 PyYAML
 tqdm
+
+python-3.11
