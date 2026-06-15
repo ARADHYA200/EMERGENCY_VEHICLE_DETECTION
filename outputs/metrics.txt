@@ -1,0 +1,5 @@
+YOLOv8 mAP50    : 0.9574
+YOLOv8 mAP50-95 : 0.7849
+YOLOv8 Precision: 0.9062
+YOLOv8 Recall   : 0.9176
+Audio CNN: see outputs/audio_confusion_matrix.png and outputs/audio_training_curves.png

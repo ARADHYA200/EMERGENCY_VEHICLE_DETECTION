@@ -1,0 +1,10 @@
+path: D:/emergency_vehicle_detection/dataset
+
+train: images/train
+val: images/val
+
+nc: 2
+
+names:
+  0: emergency_vehicle
+  1: normal_vehicle

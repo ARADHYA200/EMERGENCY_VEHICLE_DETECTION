@@ -1,0 +1,222 @@
+# =========================
+
+# Python
+
+# =========================
+
+**pycache**/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Build / Distribution
+
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =========================
+
+# Virtual Environments
+
+# =========================
+
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# =========================
+
+# Jupyter
+
+# =========================
+
+.ipynb_checkpoints/
+*.ipynb
+
+# =========================
+
+# IDEs
+
+# =========================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+
+# OS Files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+
+# Logs
+
+# =========================
+
+*.log
+logs/
+
+# =========================
+
+# Environment Variables
+
+# =========================
+
+.env
+.env.local
+.env.*
+credentials.json
+secrets.yaml
+
+# Streamlit Secrets
+
+.streamlit/secrets.toml
+
+# =========================
+
+# Cache
+
+# =========================
+
+.cache/
+*.cache
+.pytest_cache/
+.mypy_cache/
+
+# =========================
+
+# Temporary Files
+
+# =========================
+
+*.bak
+*.tmp
+*temp*
+~*
+
+# =========================
+
+# Generated Outputs
+
+# =========================
+
+outputs/generated_*.mp4
+outputs/*.jpg
+outputs/*.jpeg
+outputs/*.png
+outputs/*.gif
+
+# =========================
+
+# YOLO / Training Outputs
+
+# =========================
+
+runs/
+wandb/
+
+# =========================
+
+# Large Model Files
+
+# =========================
+
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pkl
+*.pickle
+*.joblib
+
+# =========================
+
+# Large Media Files
+
+# =========================
+
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.flac
+*.7z
+*.zip
+*.rar
+*.pt
+
+# =========================
+
+# Reports
+
+# =========================
+
+report/*.pdf
+report/*.docx
+
+# =========================
+
+# Dataset Cache
+
+# =========================
+
+dataset/cache/
+final_dataset/cache/
+
+# =========================
+
+# Debug / Temp Folders
+
+# =========================
+
+temp/
+debug/
+test_output/
+
+# =========================
+
+# Keep Dataset & Models
+
+# Uncomment ONLY if dataset/model
+
+# is too large for GitHub
+
+# =========================
+
+dataset/
+
+final_dataset/
+
+raw_data/
+
+models/
