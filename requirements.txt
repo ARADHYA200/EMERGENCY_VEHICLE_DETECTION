@@ -34,39 +34,25 @@
 # # Core
 # python==3.10
 
+torch>=2.9.0
+tensorflow==2.13.0
 
-# Core
-# python==3.10
+ultralytics==8.0.196
+opencv-python-headless==4.8.1.78
 
-# ML frameworks (balanced)
-torch
-tensorflow
+librosa==0.10.1
+soundfile==0.12.1
 
-# Vision + YOLO
-ultralytics
-opencv-python-headless
+moviepy==1.0.3
+imageio-ffmpeg==0.4.9
 
-# Audio
-librosa
-soundfile
-sounddevice
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.3.2
 
-# Video
-moviepy
-imageio-ffmpeg
+streamlit==1.28.2
 
-# Data
-numpy
-pandas
-scikit-learn
-
-# UI
-streamlit
-
-# Utils
-matplotlib
-PyYAML
-tqdm
-
-# Core
-python==3.10
+matplotlib==3.7.3
+PyYAML==6.0.1
+tqdm==4.66.1
+requests

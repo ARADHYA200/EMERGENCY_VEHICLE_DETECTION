@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: emergency-vehicle-detection
+    runtime: python
+
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+
+    startCommand: |
+      streamlit run app/app.py --server.port=$PORT --server.address=0.0.0.0
