@@ -36,7 +36,6 @@
 
 # ML frameworks (balanced)
 torch
-tensorflow
 
 # Vision + YOLO
 ultralytics
