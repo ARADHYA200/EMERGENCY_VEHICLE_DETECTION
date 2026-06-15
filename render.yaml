@@ -3,6 +3,10 @@ services:
     name: emergency-vehicle-detection
     runtime: python
 
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
+
     buildCommand: |
       pip install --upgrade pip
       pip install -r requirements.txt
