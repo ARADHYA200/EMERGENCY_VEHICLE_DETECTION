@@ -1,92 +1,135 @@
-# Multimodal Emergency Vehicle Detection System
+# 🚦 AI Smart City Traffic Management System
 
-End-to-end final-year major project that detects emergency vehicles using:
-- **Vision**: YOLOv8 trained on Open Images (Ambulance, Police car, Fire engine) + COCO (car/bus/truck → `normal_vehicle`).
-- **Audio**: CNN trained on UrbanSound8K (siren vs non-siren) using MFCC features.
-- **Fusion**: An emergency alert is raised only when an emergency vehicle is seen AND a siren is heard.
+An AI-powered Smart Traffic Management System that detects emergency vehicles using **YOLOv8 Computer Vision** and **Siren Audio Fusion** to intelligently prioritize traffic signals in real time. The system helps reduce emergency response time by dynamically controlling traffic lights based on detected emergencies.
 
-## Folder structure
+---
+
+## ✨ Features
+
+- 🚑 Emergency Vehicle Detection using YOLOv8
+- 🔊 Siren Audio Detection & Fusion
+- 🚦 Intelligent Traffic Signal Prioritization
+- 📹 Real-time Video Processing
+- 🎯 Adjustable Detection Confidence
+- ⚡ Adaptive AI Mode
+- 📊 Live Analytics Dashboard
+- 📈 Real-time Fusion Score Graph
+- 🚗 Vehicle Density Monitoring
+- ⏱ Dynamic Green Signal Timer
+- 📜 AI Event Timeline
+- 🎛 Interactive AI Controls
+
+---
+
+# 📸 Screenshots
+
+## Home Interface
+
+![Home](screenshots/home.png)
+
+---
+
+## Emergency Vehicle Detection
+
+![Detection](screenshots/emergency-detection.png)
+
+---
+
+## Live Analytics Dashboard
+
+![Dashboard](screenshots/analytics-dashboard.png)
+
+---
+
+## 🛠 Tech Stack
+
+### AI & Machine Learning
+
+- Python
+- YOLOv8
+- OpenCV
+- NumPy
+- Pandas
+- Ultralytics
+
+### Audio Processing
+
+- Librosa
+- Sound Processing
+
+### Visualization
+
+- Plotly
+- Streamlit
+
+---
+
+## 📂 Project Structure
 
 ```
-emergency_vehicle_detection/
-├── dataset/
-│   ├── images/{train,val}/        # YOLO images
-│   ├── labels/{train,val}/        # YOLO .txt labels
-│   └── audio/{siren,non_siren}/   # UrbanSound8K wav clips
-├── models/                        # trained weights (yolo .pt, audio .h5)
-├── scripts/                       # all runnable pipeline scripts
-├── configs/                       # data.yaml for YOLO
-├── outputs/                       # annotated videos, plots, metrics
-└── report/                        # report.md (abstract..future scope)
+EMERGENCY_VEHICLE_DETECTION
+│
+├── app
+├── configs
+├── dataset
+├── final_dataset
+├── models
+├── outputs
+├── raw_data
+├── report
+├── runs
+├── scripts
+├── screenshots
+│   ├── home.png
+│   ├── upload-video.png
+│   ├── emergency-detection.png
+│   └── analytics-dashboard.png
+│
+├── requirements.txt
+├── README.md
+└── render.yaml
 ```
 
-## Class mapping (final, unified)
-```
-0 → emergency_vehicle
-1 → normal_vehicle
-```
+---
 
-## Setup
+## 🚀 Installation
+
+Clone the repository
 
 ```bash
-python -m venv venv && source venv/bin/activate   # (Windows: venv\Scripts\activate)
+git clone https://github.com/ARADHYA200/EMERGENCY_VEHICLE_DETECTION.git
+```
+
+Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-Requires Python 3.10+ and (recommended) an NVIDIA GPU with CUDA for training.
-
-## Quick Start (Models Already Trained)
+Run the application
 
 ```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run multimodal detection on webcam
-python scripts/multimodal_system.py --webcam
-
-# Or on a video
-python scripts/multimodal_system.py --video dataset/videos/traffic.mp4
-
-# Evaluate models
-python scripts/evaluate.py
+streamlit run app/app.py
 ```
 
-## Full Pipeline (If Retraining Needed)
-# 1. Download only required Open Images classes (Ambulance, Police car, Fire engine)
-python scripts/download_openimages.py
+---
 
-# 2. Download only required COCO classes (car, bus, truck) and remap to normal_vehicle
-python scripts/download_coco.py
+## 📊 Project Highlights
 
-# 3. Download UrbanSound8K and split into siren / non_siren
-python scripts/download_urbansound.py
+- Detects emergency vehicles in uploaded traffic videos.
+- Combines visual detection with siren audio analysis.
+- Automatically prioritizes traffic signals.
+- Displays real-time AI analytics and monitoring dashboard.
+- Designed for smart city traffic management applications.
 
-# 4. Convert + merge all annotations into one YOLO dataset
-python scripts/prepare_yolo_dataset.py
+---
 
-# 5. Train YOLOv8 vehicle detector
-python scripts/train_yolo.py
+## 👨‍💻 Author
 
-# 6. Train audio siren CNN
-python scripts/train_audio.py
+**Aradhya Agarwal**
 
-# 7. Evaluate both models
-python scripts/evaluate.py
+GitHub: https://github.com/ARADHYA200
 
-# 8. Run the multimodal demo on a video (with audio track)
-python scripts/run_multimodal_demo.py --source outputs/sample.mp4
-```
+---
 
-See `report/report.md` for the submission write-up.
-
-## Web UI (Streamlit)
-
-After training both models, launch the browser UI:
-
-```bash
-streamlit run app/streamlit_app.py
-```
-
-Then upload a video, adjust the YOLO confidence and siren-probability thresholds
-in the sidebar, watch live frame-by-frame detection with the fusion alert
-banner, and download the annotated MP4.
+## ⭐ If you found this project useful, consider giving it a Star!
