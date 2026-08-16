@@ -220,3 +220,6 @@ final_dataset/
 raw_data/
 
 models/
+
+test_new.py
+test.py
